@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Resources/css/base.css">
+<title>AIM Research Lab | Home</title>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mainNav").classList.toggle("show");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html"><img src="Resources/aim_lab_logo.png" alt="AIM Research Lab Logo"></a>
+      <p style="margin:0;font-size:1.4rem;">AIM Research Lab @ Katz</p>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+</section>
+  
+<section style="display: flex; flex-direction: column; justify-content: center; align-items: center;  text-align: center; padding: 2px; border-bottom: 2px solid navy; border-top: 2px solid navy">
+  <h2>AI, IoT, and Multimedia (AIM) Research Lab @ Katz School of Health and Science</h2>
+  <p>Pioneering intelligent, connected, and immersive systems.</p>
+  <!-- <img src="hero-demo.jpg" alt="AIoT" style="max-width:70%; border-radius:12px;"> -->
+</section>
+
+
+<section class="section">
+<h2>Lab Mission</h2>
+<p>The AIM Research Lab drives innovation at the intersection of AI algorithms, IoT edge systems, and multimedia processing to create intelligent, real-time applications for industry and academia.</p>
+<p>Funding: NSF | NIH | DOT| Others</p>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Left: Logo + Name + Address -->
+    <div class="footer-left">
+      <img src="Resources/aim_lab_logo - full.png" alt="AIM Research Lab Logo">
+      <div>
+        <strong>AIM Research Lab</strong><br>
+        <!-- Yeshiva University<br> -->
+        Katz School of Science and Health<br>
+        215 Lexington Avenue, New York, NY 10016<br>
+        United States
+      </div>
+    </div>
+
+    <!-- Right: Social Links -->
+    <div class="footer-right">
+      <a href="#" aria-label="X (Twitter)">X</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

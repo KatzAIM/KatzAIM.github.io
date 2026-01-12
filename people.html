@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Resources/css/base.css">
+<title>AIM Research Lab | People</title>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mainNav").classList.toggle("show");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <!-- Logo -->
+    <div class="logo">
+        <a href="index.html"><img src="Resources/aim_lab_logo.png" alt="AIM Research Lab Logo"></a>
+      
+      <p style="margin:0;font-size:1.4rem;">AIM Research Lab @ Katz</p>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <style>
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .person-card {
+    text-align: center;
+  }
+
+  .person-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .person-photo {
+    width: 100%;
+    max-width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1f2933;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .person-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .person-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #111827;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .people-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .people-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+</header>
+<section class="section">
+<div class="cards">
+<!--  -->
+<section>
+  <h2>Faculty</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="https://www.honggangwang.org/home">
+        <img src="Resources/faculty/Dr. Honggang Wang.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Honggang Wang</div>
+      </a>
+    </div>
+
+    <!-- <div class="person-card">
+      <a href="#">
+        <img src="faculty2.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="#">
+        <img src="faculty3.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="#">
+        <img src="##" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="#">
+        <img src="faculty2.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="faculty-profile-3.html">
+        <img src="faculty3.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div> -->
+
+  </div>
+</section>
+
+
+<!--  -->
+<section>
+  <h2>Post-Doc</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="#">
+        <img src="Resources/students/henry-ngo.webp" alt="Hieu Ngo" class="person-photo">
+        <div class="person-name">Hieu Ngo</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/alumni/sai-praveen.jpg" alt="Sai Praveen Kadiyala" class="person-photo">
+        <div class="person-name">Sai Praveen Kadiyala</div>
+        <div>(Ph.D., Indian Institute of Technology, Kharagpur), Yeshiva University</div>
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!--  -->
+<!--  -->
+<section>
+  <h2>PhD Students</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Dengyi Liu.jpg" alt="Dengyi Liu" class="person-photo">
+        <div class="person-name">Dengyi Liu</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Ye Liu.JPG" alt="Ye Liu" class="person-photo">
+        <div class="person-name">Ye Liu</div>
+      </a>
+    </div>
+
+    
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Matthew-Fried.jpg" alt="Matthew Fried" class="person-photo">
+        <div class="person-name">Matthew Fried</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Sahil.jpeg" alt="Sahil Kumar" class="person-photo">
+        <div class="person-name">Sahil Kumar</div>
+      </a>
+    </div>
+
+        <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Namrata.jpeg" alt="Namrata Patel" class="person-photo">
+        <div class="person-name">Namrata Patel</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/Nobel.jpeg" alt="Nobel" class="person-photo">
+        <div class="person-name">Ashikur Nobel</div>
+      </a>
+    </div>
+
+
+    
+  </div>
+</section>
+
+
+<!--  -->
+<section>
+  <h2>Alumni</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="##">
+        <img src="Resources/alumni/sai-praveen.jpg" alt="Sai Praveen Kadiyala" class="person-photo">
+        <div class="person-name">Sai Praveen Kadiyala</div>
+        <div>(Ph.D., Indian Institute of Technology, Kharagpur), Yeshiva University</div>
+      </a>
+    </div>
+
+    <!-- <div class="person-card">
+      <a href="##">
+        <img src="Resources/students/A" alt="A A A" class="person-photo">
+        <div class="person-name">A A A</div>
+      </a>
+    </div> -->
+
+    
+  </div>
+</section>
+
+
+<!--  -->
+<section>
+  <h2>MS Students</h2>
+<ul>
+  <li>Aditya Singh Parmar, MS in AI, 2024 - Current</li>
+  <li>Yehuda Wexler, MS in Computer Science, 2024 - Current</li>
+  <li>Xin Xiang, Graduated MS in Data Analytics and Visualization, 2024 - Current</li>
+  <li>Mohammadzubair Khan, MS in AI, 2024 - Current</li>
+  <li>Aaron Meoded, MS in AI, 2023 - 2024</li>
+  <li>Semyon Lomasov, BS, 2023 - 2024, Now at Stanford Univ.</li>
+</ul>
+</section>
+    
+
+
+
+
+</div>
+</section>
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Left: Logo + Name + Address -->
+    <div class="footer-left">
+      <img src="Resources/aim_lab_logo - full.png" alt="AIM Research Lab Logo">
+      <div>
+        <strong>AIM Research Lab</strong><br>
+        <!-- Yeshiva University<br> -->
+        Katz School of Science and Health<br>
+        215 Lexington Avenue, New York, NY 10016<br>
+        United States
+      </div>
+    </div>
+
+    <!-- Right: Social Links -->
+    <div class="footer-right">
+      <a href="#" aria-label="X (Twitter)">X</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
