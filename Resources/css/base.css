@@ -202,29 +202,29 @@ footer a{
   background-size: cover;        /* fills section */
   background-position: center;   /* keeps focus centered */
   background-repeat: no-repeat;
-  min-height: 70vh;               /* adjust height as needed */
+  min-height: 80vh;               /* adjust height as needed */
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   color: white;
   text-align: center;
-  padding: 3rem 2rem;
-  position: relative;
+  /* padding: 3rem 2rem; */
+  /* position: relative; */
 }
 
 /* Optional: dark overlay for text readability */
 .hero::before {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   background: rgba(0, 0, 0, 0.0);
 }
 
-.hero h2,
+/* .hero h2,
 .hero p {
   position: relative;
   z-index: 1;
-}
+} */
