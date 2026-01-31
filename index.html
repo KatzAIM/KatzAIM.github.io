@@ -11,6 +11,72 @@ function toggleMenu() {
 }
 </script>
 
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .reel-container {
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .reel img {
+    width: 220px;
+    height: auto;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .reel img.active {
+    width: 300px;
+    opacity: 1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    background: white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    user-select: none;
+  }
+
+  .arrow.left {
+    left: 240px; /* aligns with left side of center image */
+  }
+
+  .arrow.right {
+    right: 240px; /* aligns with right side of center image */
+  }
+</style>
+
+
 </head>
 
 <body>
@@ -44,11 +110,43 @@ function toggleMenu() {
   <!-- <img src="hero-demo.jpg" alt="AIoT" style="max-width:70%; border-radius:12px;"> -->
 </section>
 
-<section class="hero">
-</section>
+<!-- <section class="hero">
+</section> -->
   
 
 
+<div class="reel-container">
+  <div class="arrow left" onclick="prev()">&#10094;</div>
+
+  <div class="reel">
+    <img src="Resources/group_photo_december_2025.jpeg" alt="Photo 1">
+    <img src="Resources/aim_lab_logo - full.png" class="active" alt="Photo 2">
+    <img src="Resources/robo_solo.png" alt="Photo 3">
+  </div>
+
+  <div class="arrow right" onclick="next()">&#10095;</div>
+</div>
+
+<script>
+  const images = document.querySelectorAll('.reel img');
+  let current = 1;
+
+  function update() {
+    images.forEach((img, index) => {
+      img.classList.toggle('active', index === current);
+    });
+  }
+
+  function prev() {
+    current = (current - 1 + images.length) % images.length;
+    update();
+  }
+
+  function next() {
+    current = (current + 1) % images.length;
+    update();
+  }
+</script>
 
 <section class="section">
 <h2>Lab Mission</h2>
