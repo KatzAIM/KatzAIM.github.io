@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Resources/css/base.css">
 <title>AIM Research Lab | Research</title>
 
@@ -47,8 +48,8 @@ function toggleMenu() {
   /* Layout */
   .research-layout {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    gap: 1rem;
   }
 
   /* Sidebar */
@@ -57,34 +58,39 @@ function toggleMenu() {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 0.5rem;
   padding: 0;
+  flex-wrap: wrap;
 }
 
   .research-nav-item {
-    padding: 14px 24px;
+    padding: 12px 22px;
     cursor: pointer;
-    border-left: 4px solid transparent;
-    border: 2px solid navy;
-    margin: 2px;
+    border: 1px solid rgba(20, 32, 51, 0.14);
+    border-radius: 999px;
+    background: #ffffff;
+    color: #12345b;
+    box-shadow: 0 8px 24px rgba(12, 8, 40, 0.08);
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
   }
 
   .research-nav-item:hover {
-    background: #243d64;
-    color:rgb(244, 242, 242);
+    background: #ffffff;
+    border-color: rgba(18, 52, 91, 0.32);
+    color: #0c0828;
+    transform: translateY(-1px);
   }
 
   .research-nav-item.is-active {
-    background: #111827;
-    border-left-color: #3b82f6;
-    font-weight: bold;
-    color: white;
+    background: #ffffff;
+    border-color: #0c0828;
+    color: #0c0828;
   }
 
   /* Content Area */
   .research-main {
     flex: 1;
-    padding: 30px 40px;
-    background: #f9fafb;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
   }
 
   .research-main h2 {
@@ -98,7 +104,6 @@ function toggleMenu() {
   }
 
   .research-main p {
-    color: #374151;
     line-height: 1.6;
   }
 
@@ -110,6 +115,10 @@ function toggleMenu() {
     margin-bottom: 8px;
   }
 
+  .research-main > section > ul > li {
+    padding: 0.35rem 0;
+  }
+
   /* Sections */
   .research-section {
     display: none;
@@ -117,6 +126,13 @@ function toggleMenu() {
 
   .research-section.is-active {
     display: block;
+  }
+
+  @media (max-width: 620px) {
+    .research-nav-item {
+      flex: 1 1 100%;
+      text-align: center;
+    }
   }
 </style>
 
@@ -157,7 +173,7 @@ function toggleMenu() {
       <h3>Key Projects</h3>
       <ul>
         <li>
-          <strong>ML-based Cooperative Perception for Autonomous Vehicles</strong>
+          ML-based Cooperative Perception for Autonomous Vehicles
           <ul>
             <li>Sensor data fusion using machine learning</li>
             <li>mmWave-enabled scalable feature-map transmission</li>
@@ -166,7 +182,7 @@ function toggleMenu() {
         </li>
 
         <li>
-          <strong>Efficient Fuzzy Clustering for Distributed Big Data</strong>
+          Efficient Fuzzy Clustering for Distributed Big Data
           <ul>
             <li>High-dimensional and mixed-type data clustering</li>
             <li>Distributed and scalable algorithms</li>
@@ -195,7 +211,7 @@ function toggleMenu() {
       <h3>Key Projects</h3>
       <ul>
         <li>
-          <strong>IoT for Secure and Smart Connected Health</strong>
+          IoT for Secure and Smart Connected Health
           <ul>
             <li>WBAN-based biomedical sensing</li>
             <li>Physiological data analytics and prediction</li>
@@ -204,7 +220,7 @@ function toggleMenu() {
         </li>
 
         <li>
-          <strong>AI-IoT Integration</strong>
+          AI-IoT Integration
           <ul>
             <li>Edge AI for predictive maintenance</li>
             <li>Anomaly detection in sensor networks</li>
