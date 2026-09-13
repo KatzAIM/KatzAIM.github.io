@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -28,7 +28,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.65;
   min-height: 100vh;
   display: flex;
@@ -54,10 +54,13 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-weight: 400;
+}
+
 strong,
 b {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* ===== HEADER & NAV ===== */
@@ -125,12 +128,16 @@ nav a {
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
 }
 
+nav a.active,
 nav a:hover {
   background: transparent;
   color: #ffffff;
   border-color: rgba(131, 172, 220, 0.55);
-  transform: translateY(-1px);
   text-decoration: none;
+}
+
+nav a:hover {
+  transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -217,14 +224,17 @@ nav a:hover {
 #publications p {
   max-width: none;
   margin: 0;
-  padding: 0.6rem 0 0.6rem 0.35rem;
+  padding: 1rem 0 1rem 0.35rem;
   border-bottom: 1px solid var(--line);
   color: #243245;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .publication-list li::marker {
+  content: "\203A  ";
   color: var(--brand-2);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .publication-list li:last-child,
