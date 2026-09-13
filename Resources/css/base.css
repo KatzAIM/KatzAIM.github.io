@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
 :root {
   --bg: #ffffff;
   --surface: #ffffff;
@@ -9,8 +11,8 @@
   --accent: #1f5f99;
   --accent-2: #d4a437;
   --line: rgba(20, 32, 51, 0.12);
-  --shadow: 0 18px 50px rgba(12, 8, 40, 0.12);
-  --radius: 8px;
+  --shadow: none;
+  --radius: 0;
 }
 
 * {
@@ -19,12 +21,13 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
   margin: 0;
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
   font-weight: 400;
   line-height: 1.65;
   min-height: 100vh;
@@ -64,9 +67,9 @@ header {
   z-index: 20;
   background: rgba(12, 8, 40, 0.96);
   color: #fff;
-  padding: 0.75rem clamp(1rem, 3vw, 2.25rem);
+  padding: 0.4rem clamp(1rem, 3vw, 2.25rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 32px rgba(12, 8, 40, 0.2);
+  box-shadow: none;
   backdrop-filter: blur(14px);
 }
 
@@ -95,7 +98,7 @@ header {
   height: 72px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
+  filter: none;
 }
 
 .logo p {
@@ -106,14 +109,14 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.15rem;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 nav a {
-  padding: 0.55rem 0.85rem;
-  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0;
   color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
   font-size: 0.95rem;
@@ -139,7 +142,7 @@ nav a:hover {
   border-radius: var(--radius);
   font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: none;
 }
 
 /* ===== CONTENT ===== */
@@ -153,22 +156,22 @@ nav a:hover {
 
 .section {
   width: min(1120px, calc(100% - 2rem));
-  padding: clamp(2.4rem, 5vw, 4.5rem) 0;
+  padding: clamp(1.2rem, 3vw, 2.5rem) 0;
   margin: 0 auto;
 }
 
 .section h2 {
-  margin: 0 0 1.15rem;
+  margin: 0 0 0.75rem;
   color: var(--brand);
   font-size: clamp(1.75rem, 2.8vw, 2.2rem);
   line-height: 1.12;
   letter-spacing: 0;
-  padding-bottom: 0.65rem;
+  padding-bottom: 0.4rem;
   border-bottom: 3px solid rgba(18, 52, 91, 0.16);
 }
 
 .section h3 {
-  margin: 1.5rem 0 0.35rem;
+  margin: 1rem 0 0.25rem;
   color: var(--brand-2);
   line-height: 1.2;
 }
@@ -183,7 +186,7 @@ nav a:hover {
 }
 
 .section li {
-  margin: 0.45rem 0;
+  margin: 0.25rem 0;
 }
 
 #publications,
@@ -214,7 +217,7 @@ nav a:hover {
 #publications p {
   max-width: none;
   margin: 0;
-  padding: 0.95rem 0 0.95rem 0.35rem;
+  padding: 0.6rem 0 0.6rem 0.35rem;
   border-bottom: 1px solid var(--line);
   color: #243245;
 }
@@ -252,7 +255,7 @@ nav a:hover {
 .reel img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  box-shadow: 0 16px 38px rgba(12, 8, 40, 0.24);
+  box-shadow: none;
 }
 
 body > section:first-of-type {
@@ -260,7 +263,7 @@ body > section:first-of-type {
   color: var(--brand);
   border-top: 0 !important;
   border-bottom: 1px solid var(--line) !important;
-  padding: clamp(1.1rem, 3vw, 2.1rem) 1rem !important;
+  padding: clamp(0.6rem, 2vw, 1.2rem) 1rem !important;
 }
 
 body > section:first-of-type h2 {
@@ -292,7 +295,7 @@ footer strong {
 .site-footer {
   background: var(--brand);
   color: #ffffff;
-  padding: 1.25rem clamp(1rem, 3vw, 2rem);
+  padding: 0.75rem clamp(1rem, 3vw, 2rem);
 }
 
 .footer-inner {
@@ -302,7 +305,7 @@ footer strong {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .footer-left {
@@ -330,7 +333,7 @@ footer strong {
   text-decoration: none;
   padding: 0.45rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
+  border-radius: 0;
   background: transparent;
 }
 
