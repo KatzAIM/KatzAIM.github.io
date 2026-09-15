@@ -42,10 +42,10 @@ function toggleMenu() {
   <style>
   .people-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 190px);
+    grid-template-columns: repeat(auto-fill, 260px);
     justify-content: start;
     justify-items: start;
-    gap: 24px;
+    gap: 20px;
     margin: 24px 0 40px;
   }
 
@@ -59,47 +59,62 @@ function toggleMenu() {
 
   .person-card {
     text-align: center;
-    height: 100%;
-    width: 190px;
+    width: 260px;
+    aspect-ratio: 1 / 1;
   }
 
   .person-card a {
     display: flex;
-    min-height: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 12px 10px;
+    justify-content: flex-start;
+    padding: 16px 12px 10px;
     text-decoration: none;
     color: inherit;
     background: #ffffff;
     border: 1px solid rgba(20, 32, 51, 0.12);
     border-radius: 0;
     box-shadow: none;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .person-photo {
-    width: 100%;
-    max-width: 168px;
-    height: 204px;
+    width: 170px;
+    height: 170px;
     object-fit: cover;
+    object-position: center 10%;
     border-radius: 8px;
     border: 1px solid rgba(20, 32, 51, 0.12);
     box-shadow: none;
+    margin-bottom: 8px;
   }
 
   .person-name {
-    margin-top: 12px;
+    margin-top: 4px;
     color: #0D2959;
+    font-weight: bold;
+    font-size: 0.95em;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  
+  .person-card a div:not(.person-name) {
+    font-size: 0.8em;
+    line-height: 1.2;
   }
 
   /* Responsive */
   @media (max-width: 900px) {
     .people-grid {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 
     .person-card {
       width: 100%;
+      aspect-ratio: auto;
+      min-height: 260px;
     }
   }
 
@@ -108,9 +123,7 @@ function toggleMenu() {
       grid-template-columns: 1fr;
     }
   }
-</style>
-
-
+  </style>
 </header>
 <section class="section">
 <div class="cards">
@@ -332,5 +345,22 @@ function toggleMenu() {
 
   </div>
 </footer>
+
+<script>
+window.addEventListener('load', function() {
+  document.querySelectorAll('.person-card a').forEach(card => {
+    let sizeMultiplier = 1.0;
+    const nameDiv = card.querySelector('.person-name');
+    const descDivs = card.querySelectorAll('div:not(.person-name)');
+    
+    while (card.scrollHeight > card.clientHeight && sizeMultiplier > 0.5) {
+      sizeMultiplier -= 0.05;
+      if (nameDiv) nameDiv.style.fontSize = (0.95 * sizeMultiplier) + 'em';
+      descDivs.forEach(div => div.style.fontSize = (0.8 * sizeMultiplier) + 'em');
+    }
+  });
+});
+</script>
+
 </body>
 </html>

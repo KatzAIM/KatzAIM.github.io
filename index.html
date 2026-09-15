@@ -83,7 +83,22 @@ function toggleMenu() {
   } */
 </style>
 
-
+<style>
+  /* Ensure background is visible only on index */
+  html { background: #ffffff; }
+  body { background: transparent !important; }
+  
+  /* Make upper sections completely transparent to show the faint canvas clearly */
+  .hero, .reel, body > section:first-of-type {
+    background: transparent !important;
+    backdrop-filter: none; /* Removed blur so it's sharp */
+  }
+  
+  /* Keep lower sections mostly opaque */
+  #publications, .contact-section, .research-main, .section {
+    background: #ffffff !important;
+  }
+</style>
 </head>
 
 <body>
@@ -195,5 +210,8 @@ function toggleMenu() {
 
   </div>
 </footer>
+
+<!-- Interactive Neuron Background -->
+<script src="Resources/js/neuron-bg.js"></script>
 </body>
 </html>
